@@ -86,7 +86,7 @@ if (isNaN(inputValue)) {
 //Task 5.
 /*Выведите все числа в заданном диапазоне, которые делятся на 5. 
 (Функция принимает два числа (от и до) и выводит в консоль всё из этого диапазона, что делится на 5).*/
-
+/*
 const fromNumber = Number(prompt('Type begin'));
 const toNumber = Number(prompt('Type end'));
 
@@ -103,7 +103,7 @@ if (isNaN(fromNumber) || isNaN(toNumber)) {
 } else {
   devideFive(fromNumber, toNumber);
 }
-
+*/
 //Task 6.
 /*Реализовать игру FizzBuzz (Fizz buzz это групповая детская игра для обучения правилам деления. 
 Начинающий произносит число «1», и каждый следующий игрок прибавляет к предыдущему значению единицу. 
@@ -114,3 +114,22 @@ if (isNaN(fromNumber) || isNaN(toNumber)) {
 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, 
 Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...)
 Диапазон игры - 100 чисел.*/
+
+const fromNumber = 1;
+const toNumber = 100;
+
+function getFillBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'Fizz Buzz';
+  } else if (number % 3 === 0) {
+    return 'Fizz';
+  } else if (number % 5 === 0) {
+    return 'Buzz';
+  } else {
+    return number;
+  }
+}
+
+for (let index = fromNumber; index <= toNumber; index++) {
+  console.log(getFillBuzz(index));
+}
