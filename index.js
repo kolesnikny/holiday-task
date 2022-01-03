@@ -58,7 +58,7 @@ if (isNaN(inputHeight) || isNaN(inputDiameter)) {
 //Task 4.
 /*Реализовать конвертер доллара (доллар-грн и грн-доллар, в зависимости от 
 переданного модификатора). Курс текущий на момент решения задачи*/
-
+/*
 const PriceDollar = 27.5;
 
 const inputModifier = Number(
@@ -82,10 +82,27 @@ if (isNaN(inputValue)) {
 } else {
   alert(converterMoney(inputModifier, inputValue));
 }
-
+*/
 //Task 5.
 /*Выведите все числа в заданном диапазоне, которые делятся на 5. 
 (Функция принимает два числа (от и до) и выводит в консоль всё из этого диапазона, что делится на 5).*/
+
+const fromNumber = Number(prompt('Type begin'));
+const toNumber = Number(prompt('Type end'));
+
+function devideFive(from, to) {
+  for (let index = from; index <= to; index++) {
+    if (index % 5 === 0) {
+      console.log(index);
+    }
+  }
+}
+
+if (isNaN(fromNumber) || isNaN(toNumber)) {
+  alert('The entered values do not match the conditions.');
+} else {
+  devideFive(fromNumber, toNumber);
+}
 
 //Task 6.
 /*Реализовать игру FizzBuzz (Fizz buzz это групповая детская игра для обучения правилам деления. 
